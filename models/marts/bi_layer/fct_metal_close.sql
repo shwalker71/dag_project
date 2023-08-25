@@ -19,12 +19,12 @@ final_metal_changes as (
         close_gold,
         high_gold,
         low_gold,
-        ((close_gold-prev_close_gold)
+        (100*(close_gold-prev_close_gold)
         /prev_close_gold) as pct_gold_change,
         close_silver,
         high_silver,
         low_silver,
-        ((close_silver-prev_close_silver)
+        (100*(close_silver-prev_close_silver)
         /prev_close_silver) as pct_silver_change
     from initial_metal_changes
 )
