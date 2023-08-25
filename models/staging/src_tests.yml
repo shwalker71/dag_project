@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_gold_data
+    columns:
+      - name: trading_date
+        tests:
+          - unique
+          - relationships:
+              to: ref('stg_silver_data')
+              field: trading_date
