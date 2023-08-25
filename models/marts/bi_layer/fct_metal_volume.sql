@@ -14,9 +14,9 @@ final_metal_changes as (
         trading_date,
         volume_gold,
         volume_silver,
-        ((volume_gold-prev_volume_gold)
+        (100*(volume_gold-prev_volume_gold)
         /prev_volume_gold) as pct_gold_change,
-        ((volume_silver-prev_volume_silver)
+        (100*(volume_silver-prev_volume_silver)
         /prev_volume_silver) as pct_silver_change
     from initial_metal_changes
 )
